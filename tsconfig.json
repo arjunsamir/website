@@ -12,6 +12,12 @@
       ],
       "@utils/*": [
         "src/utils/*"
+      ],
+      "@anime": [
+        "node_modules/@juliangarnierorg/anime-beta"
+      ],
+      "@extradope": [
+        "node_modules/@extra-dope/web-ui"
       ]
     },
     "jsx": "react-jsx",
