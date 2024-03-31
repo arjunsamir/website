@@ -1,16 +1,37 @@
 ---
+import "@extradope/style/base.scss"
+import { Link } from "@extradope/astro"
+import { Button } from "@extradope/react"
 
+const title = "Whagwan Astro!"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <h1>{title}</h1>
+    <Link href="/about">About</Link>
+    <Button client:load onClick={() => console.log("hello")}>Click me</Button>
+  </body>
 </html>
+
+<script>
+  import { animate } from "anime"
+  import { getMotionPreference } from "@extradope"
+  console.log(getMotionPreference())
+  console.log(animate)
+</script>
+
+<style lang="scss">
+  @import "@extradope/style/media-queries.scss";
+  @import "@extradope/style/colors.scss";
+  h1 {
+    color: $dope;
+  }
+</style>

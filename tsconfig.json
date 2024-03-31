@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "/Users/arjunsamir/repos/website",
+    "baseUrl": "./",
     "paths": {
       "@components/*": [
         "src/components/*"
@@ -12,6 +12,15 @@
       ],
       "@utils/*": [
         "src/utils/*"
+      ],
+      "anime": [
+        "node_modules/@juliangarnierorg/anime-beta"
+      ],
+      "@extradope": [
+        "node_modules/@extra-dope/web-ui/lib/index.ts"
+      ],
+      "@extradope/*": [
+        "node_modules/@extra-dope/web-ui/lib/*"
       ]
     },
     "jsx": "react-jsx",

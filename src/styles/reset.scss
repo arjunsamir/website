@@ -1,0 +1,24 @@
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include tablet {
+      font-size: 56.25%; //1rem = 9px
+    }
+
+    @include phone {
+      font-size: 50%; //1rem = 8px
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}

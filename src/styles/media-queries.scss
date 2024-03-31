@@ -1,0 +1,144 @@
+// Phone Media Queries
+$phone: 37.5em;
+$iPhoneMini: 23em;
+$iPhone: 30em;
+$iPhonePro: $phone;
+
+// Tablet Media Queries
+$tablet: 59.375em;
+$iPad: 50em;
+$iPadMini: 56.25em;
+$iPadPro: $tablet;
+
+// Desktop Media Queries
+$desktop: 90em;
+$macbook: 90em;
+$studioDisplay: 110em;
+$proDisplay: 120em;
+$ultraWide: 160em;
+
+@mixin iPhoneMini {
+  @media screen and (max-width: $iPhoneMini) {
+    @content;
+  }
+}
+
+@mixin iPhone {
+  @media screen and (min-width: $iPhoneMini) and (max-width: $iPhone) {
+    @content;
+  }
+}
+
+@mixin iPhonePro {
+  @media screen and (min-width: $iPhoneMini) and (max-width: $iPhonePro) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $iPhonePro) {
+    @content;
+  }
+}
+
+@mixin phoneLandscape {
+  @media screen and (max-width: $iPhonePro) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin iPadMini {
+  @media screen and (min-width: $phone) and (max-width: $iPad) {
+    @content;
+  }
+}
+
+@mixin iPad {
+  @media screen and (min-width: $iPadMini) and (max-width: $iPad) {
+    @content;
+  }
+}
+
+@mixin iPadPro {
+  @media screen and (min-width: $iPadMini) and (max-width: $iPadPro) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $iPadPro) {
+    @content;
+  }
+}
+
+@mixin tabletLandscape {
+  @media screen and (min-width: $iPadPro) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin macbook {
+  @media screen and (min-width: $tablet) and (max-width: $macbook) {
+    @content;
+  }
+}
+
+@mixin studioDisplay {
+  @media screen and (min-width: $macbook) and (max-width: $studioDisplay) {
+    @content;
+  }
+}
+
+@mixin proDisplay {
+  @media screen and (min-width: $studioDisplay) and (max-width: $proDisplay) {
+    @content;
+  }
+}
+
+@mixin ultraWide {
+  @media screen and (min-width: $proDisplay) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin prefersDark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin prefersLight {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin prefersContrast {
+  @media (prefers-color-scheme: high-contrast) {
+    @content;
+  }
+}
+
+@mixin prefersReducedMotion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin mouse {
+  @media (pointer: fine) {
+    @content;
+  }
+}
